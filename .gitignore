@@ -1,0 +1,4 @@
+tf2/
+__pycache__/
+*.pyc
+uploads/

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classification</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.min.css">
+</head>
+<body>
+    <h1>Upload an image for prediction</h1>
+    <!-- Dropzone form for image upload -->
+    <form action="/" class="dropzone" id="my-awesome-dropzone"></form>
+
+    <!-- Dropzone JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.2/dropzone.min.js"></script>
+    <script>
+        // Initialize Dropzone
+        Dropzone.options.myAwesomeDropzone = {
+            init: function() {
+                this.on("success", function(file, response) {
+                    // On successful upload, redirect to the result page
+                    window.location.href = "/result/" + response.filename;
+                });
+            }
+        };
+    </script>
+</body>
+</html>
